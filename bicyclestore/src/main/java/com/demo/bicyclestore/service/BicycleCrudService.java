@@ -58,7 +58,7 @@ public class BicycleCrudService {
         bicycleEntityRepository.saveAll(bicycleDto.stream().map(BicycleDto::toEntity).collect(Collectors.toList()));
     }
 
-    @Cacheable(cacheNames="bicycles", key="#bicycleDto.id")
+    @Cacheable(cacheNames="bicycles", key="#bicycleDto.hash()")
     public Object findByFilter(BicycleDto bicycleDto) {
         return bicycleEntityRepository.findAll(
                 BicycleSpecs.like("brand", bicycleDto.getBrand())
