@@ -37,5 +37,15 @@ public class BicycleDto {
                 .configId(bicycleEntity.getConfiguration().getId()).wheelSize(bicycleEntity.getConfiguration().getWheelSize())
                 .frameSize(bicycleEntity.getConfiguration().getFrameSize()).color(bicycleEntity.getConfiguration().getColor()).build();
     }
-
+    
+    public int hash() {
+        final int PRIME = 59;
+        int result = 1;
+        result = (int) (result * PRIME + this.getId());
+        result = (int) (result * PRIME + this.getFrameSize());
+        result = (int) (result * PRIME + this.getWheelSize());
+        result = result * PRIME + (this.getBrand() == null ? 43 : this.getBrand().hashCode());
+        result = result * PRIME + (this.getColor() == null ? 43 : this.getColor().hashCode());
+        return result;
+    }
 }
