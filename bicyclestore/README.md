@@ -19,6 +19,46 @@ run the **docker-compose.yml** file with below command
 Once all the three containers are up. Open any browser and navigate to below url
 > http://localhost:8080/swagger-ui/index.html
 
+### Below test data might come handy:
+>[
+{
+"id": 0,
+"brand": "bsa",
+"price": 50,
+"configId": 0,
+"wheelSize": 20,
+"frameSize": 20,
+"color": "black"
+},
+{
+"id": 0,
+"brand": "rockrider",
+"price": 100,
+"configId": 0,
+"wheelSize": 21,
+"frameSize": 19,
+"color": "blue"
+},
+{
+"id": 0,
+"brand": "roadbike",
+"price": 110,
+"id": 0,
+"wheelSize": 18,
+"frameSize": 17,
+"color": "red"
+},
+{
+"id": 0,
+"brand": "rockrider",
+"price": 200,
+"configId": 0,
+"wheelSize": 21,
+"frameSize": 20,
+"color": "blue"
+}
+]
+> 
 You would be prompted to enter credentials.
 Please use below credentials
 > username: bicycle
